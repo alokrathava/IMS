@@ -152,7 +152,7 @@ if (!isset($_SESSION['a_id'])) {
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="col-md-6">
-                        <form role="form" action="addproduct_process.php" method="post">
+                        <form role="form" action="addproduct_process.php" method="post" name="myForm">
                             <div class="form-group">
                                 <label>Product Id</label>
                                 <input class="form-control" placeholder="Product Id" name="product_id" type="text"
@@ -185,7 +185,7 @@ if (!isset($_SESSION['a_id'])) {
                         </select>
                     </div>
                     <div class="form-group" style="width: 46%;margin-left: 15px;">
-                        <label>Product Quantity</label>
+                        <label>Product Quantity (Add MAX Quanity 100.)</label>
                         <input type="number" class="form-control" placeholder="Product Quantity" name="product_qty"
                                id="product_qty" oninput="validate()">
                     </div>
@@ -241,15 +241,19 @@ if (!isset($_SESSION['a_id'])) {
 
 <script>
     function validate() {
-        if (document.getElementById("product_qty").value => 100 )
+        alert("Function Called");
+        var qty = document.myForm.product_qty.value;
+        // alert(qty)
+        if (qty =< 100 )
         {
             alert("Select Less then 100");
         }
-    else
+         else
         {
 
         }
     }
+
 </script>
 
 <script src="js/jquery-1.11.1.min.js"></script>
