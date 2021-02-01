@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Lumino - Login</title>
+	<title>IMS - Login</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
@@ -26,7 +26,8 @@
 							<div class="form-group">
 								<input class="form-control" placeholder="Password" name="password" type="password" value="" required>
 							</div>
-                            <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                            <button type="submit" class="btn btn-primary btn-lg">Login</button> <br>
+                            <a href="forgotpwd.php" class="text-info" style="margin-top: 250px">Forgot Password ?</a>
 					</form>
 				</div>
 			</div>
