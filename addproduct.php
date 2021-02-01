@@ -126,28 +126,7 @@ if (!isset($_SESSION['a_id'])) {
         <li><a href="addproduct.php"><em class="fa fa-shopping-cart">&nbsp;</em>Add Product</a></li>
         <li><a href="addcategory.php"><em class="fa fa-shopping-cart">&nbsp;</em>Add Category</a></li>
         <li><a href="product_scan.php"><em class="fa fa-barcode">&nbsp;</em>Product Scan</a></li>
-<!--        <li><a href="widgets.php"><em class="fa fa-calendar">&nbsp;</em> Widgets</a></li>-->
-<!--        <li><a href="charts.php"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>-->
-<!--        <li class="active"><a href="elements.php"><em class="fa fa-toggle-off">&nbsp;</em> UI Elements</a></li>-->
-<!--        <li><a href="panels.php"><em class="fa fa-clone">&nbsp;</em> Alerts &amp; Panels</a></li>-->
-<!--        <li class="parent "><a data-toggle="collapse" href="#sub-item-1">-->
-<!--                <em class="fa fa-navicon">&nbsp;</em> Multilevel <span data-toggle="collapse" href="#sub-item-1"-->
-<!--                                                                       class="icon pull-right"><em-->
-<!--                            class="fa fa-plus"></em></span>-->
-<!--            </a>-->
-<!--            <ul class="children collapse" id="sub-item-1">-->
-<!--                <li><a class="" href="#">-->
-<!--                        <span class="fa fa-arrow-right">&nbsp;</span> Sub Item 1-->
-<!--                    </a></li>-->
-<!--                <li><a class="" href="#">-->
-<!--                        <span class="fa fa-arrow-right">&nbsp;</span> Sub Item 2-->
-<!--                    </a></li>-->
-<!--                <li><a class="" href="#">-->
-<!--                        <span class="fa fa-arrow-right">&nbsp;</span> Sub Item 3-->
-<!--                    </a></li>-->
-<!--            </ul>-->
-<!--        </li>-->
-        <li><a href="login.php"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+        <li><a href="logout.php"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
     </ul>
 </div><!--/.sidebar-->
 
@@ -177,15 +156,16 @@ if (!isset($_SESSION['a_id'])) {
                             <div class="form-group">
                                 <label>Product Id</label>
                                 <input class="form-control" placeholder="Product Id" name="product_id" type="text"
-                                       autofocus autocomplete="off">
+                                       autofocus autocomplete="off" required>
                             </div>
                             <div class="form-group">
                                 <label>Product Name</label>
-                                <input type="text" class="form-control" placeholder="Product Name" name="product_name">
+                                <input type="text" class="form-control" placeholder="Product Name" name="product_name"
+                                       required>
                             </div>
                             <div class="form-group">
                                 <label>Product Details</label>
-                                <textarea class="form-control" rows="3" name="product_detail"></textarea>
+                                <textarea class="form-control" rows="3" name="product_detail" required></textarea>
                             </div>
                     </div>
                     <div class="form-group" style="width: 46%;margin-left: 15px;">
@@ -205,8 +185,9 @@ if (!isset($_SESSION['a_id'])) {
                         </select>
                     </div>
                     <div class="form-group" style="width: 46%;margin-left: 15px;">
-                        <label>Product Name</label>
-                        <input type="number" class="form-control" placeholder="Product Quantity" name="product_qty">
+                        <label>Product Quantity</label>
+                        <input type="number" class="form-control" placeholder="Product Quantity" name="product_qty"
+                               id="product_qty" oninput="validate()">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit Button</button>
                     <button type="reset" class="btn btn-default">Reset Button</button>
@@ -256,7 +237,20 @@ if (!isset($_SESSION['a_id'])) {
     </div><!-- /.panel-->
 </div><!-- /.col-->
 </div><!-- /.row -->
-</div><!--/.main-->
+</div><!--/.main-->'
+
+<script>
+    function validate() {
+        if (document.getElementById("product_qty").value => 100 )
+        {
+            alert("Select Less then 100");
+        }
+    else
+        {
+
+        }
+    }
+</script>
 
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
