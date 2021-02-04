@@ -32,7 +32,7 @@ if ($result->num_rows>0) {
         $mail->Port = 587;
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
         $mail->Username = 'jigarpatel.devloper@gmail.com';                 // SMTP username
-        $mail->Password = 'admin@1a';                           // SMTP password
+        $mail->Password = 'WriteYourPassword';                           // SMTP password
 
         $mail->setFrom('jigarpatel.devloper@gmail.com', 'IMS');
         $mail->addAddress($Email, $Name);     // Add a recipient
